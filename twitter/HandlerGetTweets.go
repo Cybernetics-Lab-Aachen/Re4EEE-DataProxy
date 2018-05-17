@@ -35,5 +35,5 @@ func HandlerGetTweets(response http.ResponseWriter, request *http.Request) {
 	}
 
 	jsonBytes, _ := json.Marshal(result)
-	fmt.Fprintln(response, jsonBytes)
+	fmt.Fprintln(response, string(jsonBytes))
 }
