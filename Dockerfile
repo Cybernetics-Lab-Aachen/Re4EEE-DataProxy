@@ -37,7 +37,7 @@ ENV Re4EEEDataProxy_TwitterDBDatabaseName="TweetCollector"
 ENV Re4EEEDataProxy_TwitterDBUsername="TweetCollector"
 ENV Re4EEEDataProxy_TwitterDBPassword="PASSWORD"
 ENV Re4EEEDataProxy_TwitterDBCollectionName="Tweets"
-ENV Re4EEEDataProxy_ServerIfacePort="0.0.0.0:80"
+ENV Re4EEEDataProxy_ServerIfacePort="0.0.0.0:50000"
 
 # Run anything below as nobody:
 USER nobody
