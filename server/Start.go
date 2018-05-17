@@ -4,5 +4,8 @@ import "log"
 
 func Start() {
 	log.Print("Start the server now.")
-	server.ListenAndServe()
+	errServer := server.ListenAndServe()
+	if errServer != nil {
+		log.Printf("Error while running the server: %s", errServer)
+	}
 }
