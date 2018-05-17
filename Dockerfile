@@ -4,7 +4,7 @@ ENV GOPATH /go
 # Update the operating system and install base tools:
 RUN apt-get update && \
 	apt-get upgrade -y && \
-	apt-get install -y zip git wget curl && \
+	apt-get install -y zip git wget curl nano mc && \
 	# Create the Go workspace:
 	mkdir /go && \
     mkdir /go/src && \
