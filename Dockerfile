@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM wikipedia
 ENV GOPATH /go
 
 # Update the operating system and install base tools:
