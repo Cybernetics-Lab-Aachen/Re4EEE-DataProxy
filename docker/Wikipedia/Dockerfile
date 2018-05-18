@@ -8,3 +8,5 @@ RUN apt-get update && \
 RUN cd /home && \
     curl -o enwiki-multistream.xml.bz2 https://dumps.wikimedia.org/enwiki/20180501/enwiki-20180501-pages-articles-multistream.xml.bz2 && \
     curl -o enwiki-multistream-index.txt.bz2 https://dumps.wikimedia.org/enwiki/20180501/enwiki-20180501-pages-articles-multistream-index.txt.bz2
+
+CMD ["echo"]
