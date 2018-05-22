@@ -23,4 +23,6 @@ func init() {
 	server.ReadTimeout = 30 * time.Minute
 	server.WriteTimeout = 30 * time.Minute
 	server.ErrorLog = log.New(os.Stdout, ``, log.LstdFlags)
+
+	log.Printf("Server is configured on '%s'", os.Getenv("Re4EEEDataProxy_ServerIfacePort"))
 }
