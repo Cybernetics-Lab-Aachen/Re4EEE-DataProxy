@@ -18,6 +18,9 @@ func HandlerGetArticle(response http.ResponseWriter, request *http.Request) {
 	requestedTitle := request.FormValue("title")
 	requestedTitle = strings.TrimSpace(requestedTitle)
 
+	log.Printf("Getting Wikipedia article '%s'", requestedTitle)
+	defer log.Printf("Getting Wikipedia article '%s' done", requestedTitle)
+
 	if requestedTitle == `` {
 		answer.Error = "No title were defined"
 		sendAnswer(answer, response)

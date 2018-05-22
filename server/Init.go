@@ -20,7 +20,7 @@ func init() {
 	server.Addr = os.Getenv("Re4EEEDataProxy_ServerIfacePort")
 	server.Handler = serverMUX
 	server.SetKeepAlivesEnabled(false)
-	server.ReadTimeout = 3 * time.Second
+	server.ReadTimeout = 30 * time.Minute
 	server.WriteTimeout = 30 * time.Minute
 	server.ErrorLog = log.New(os.Stdout, ``, log.LstdFlags)
 }

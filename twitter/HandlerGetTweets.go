@@ -3,6 +3,7 @@ package twitter
 import (
 	"encoding/json"
 	"fmt"
+	"log"
 	"net/http"
 	"time"
 
@@ -12,6 +13,9 @@ import (
 
 // HandlerGetTweets provides the functionality to retrieve Tweets out of the database.
 func HandlerGetTweets(response http.ResponseWriter, request *http.Request) {
+
+	log.Printf("Request to load Tweets of yesterday")
+	defer log.Printf("Request to load Tweets of yesterday done")
 
 	tweets := make([]scheme.Tweet, 0)
 	yesterday := time.Now().UTC().AddDate(0, 0, -1)
