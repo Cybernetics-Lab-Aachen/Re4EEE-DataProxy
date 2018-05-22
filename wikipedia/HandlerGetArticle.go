@@ -33,7 +33,7 @@ func HandlerGetArticle(response http.ResponseWriter, request *http.Request) {
 
 	answer.ArticleID = fmt.Sprintf("%d", entry.ArticleID)
 
-	fileDump, errFile := os.OpenFile("/home/enwiki-multistream.xml.bz2", os.O_RDONLY, 0)
+	fileDump, errFile := os.OpenFile("/home/thorsten/enwiki-multistream.xml.bz2", os.O_RDONLY, 0)
 	if errFile != nil {
 		answer.Error = fmt.Sprintf("Was not possible to open the Wikipedia dump: %s", errFile)
 		log.Println(answer.Error)
