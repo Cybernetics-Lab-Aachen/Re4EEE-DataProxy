@@ -20,7 +20,7 @@ func init() {
 	lookupTableByArticleID = make(map[int64]wikiIndexWithoutArticleID)
 	allTitles = make([]string, 0)
 
-	fileIndex, errFile := os.OpenFile("/home/thorsten/enwiki-multistream-index.txt.bz2", os.O_RDONLY, 0)
+	fileIndex, errFile := os.OpenFile("/home/data/enwiki-multistream-index.txt.bz2", os.O_RDONLY, 0)
 	if errFile != nil {
 		log.Printf("Was not possible to open the Wikipedia index file: %s", errFile)
 	}

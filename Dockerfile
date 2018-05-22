@@ -47,6 +47,7 @@ EXPOSE 50000
 
 # Define the working directory:
 WORKDIR /home
+VOLUME /home/data
 
 # The default command to run, if a container starts:
 CMD ["./run.sh"]
